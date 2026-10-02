@@ -14,7 +14,7 @@ Scans a page open in the Kirki editor, suggests a correct H1–H6 outline across
 `localhost` is allowed by default. For a live domain, Chrome asks for access to that site the first time you click Scan there.
 
 ## Version
-**1.2.2**. 1.0.0 was the foundation (scan, suggest, apply on Save), 1.1.0 added the analysis fixes and improvements, and 1.2.0 adds the redesigned panel (Outline/Changes, skip, themes, ⋮ menu, faster scan). The number changes only when you decide on a new release, not with every test build.
+**1.3.0**. 1.0.0 was the foundation (scan, suggest, apply on Save), 1.1.0 added the analysis fixes and improvements, 1.2.0 brought the redesigned panel (Outline/Changes, skip, themes, ⋮ menu, faster scan), and 1.3.0 is the current release. The number changes only when you decide on a new release, not with every test build.
 
 ## Use
 1. Open a page in the Kirki editor and click **Scan page**.
