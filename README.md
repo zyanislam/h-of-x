@@ -1,26 +1,49 @@
-<img src="brand/wordmark.svg" alt="H(x) — f(page) = clarity" width="360">
+<div align="center">
 
-# H(x): f(page) = clarity
+<img src="brand/logo.svg" alt="" width="104">
+
+# H(x) &nbsp;·&nbsp; `f(page) = clarity`
+
+**A Chrome extension for the [Kirki](https://kirki.io) page builder.**
+Scan a page, get a correct H1–H6 outline across every breakpoint, apply it on Save.
 
 ![Chrome MV3](https://img.shields.io/badge/Chrome-MV3_side_panel-4285F4?style=flat-square&logo=googlechrome&logoColor=white)
 ![Tests](https://img.shields.io/badge/tests-Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
 ![Version](https://img.shields.io/badge/version-1.3.0-555?style=flat-square)
 
-A Chrome extension for the **Kirki** page builder.
+<img src="docs/screenshots/panel-outline.png" alt="The H(x) side panel showing a page outline" width="760">
 
-Scans a page open in the Kirki editor, suggests a correct H1–H6 outline across all four breakpoints, and writes the tags when you click **Save**. Nothing is changed until you review it.
+</div>
 
-**Why:** heading levels decide how a page reads to search engines and screen readers, and in a visual builder they drift out of order as a page grows. H(x) reads the real rendered structure and proposes the outline the page should have had.
+---
+
+Heading levels decide how a page reads to search engines and to screen readers, and in a visual builder they drift out of order as the page grows. H(x) reads the **rendered** structure on all four canvases and proposes the outline the page should have had. Nothing is written until you review it and click Save in Kirki.
 
 ### At a glance
-- **Review first** — every suggested change is a row you can retag, untick or skip
-- **All breakpoints** — desktop, tablet, landscape and mobile are merged into one tag per element
-- **Safe write** — a one-shot hook rewrites the tag in Kirki's own save request, then removes itself
-- **Rich text aware** — a heading with styled `<span>`s stays one block
-- Light / dark / auto panel, live outline preview and checks
+
+|  |  |
+|---|---|
+| **Review first** | Every suggested change is a row you can retag, untick or skip |
+| **All breakpoints** | Desktop, tablet, landscape and mobile merged into one tag per element |
+| **Safe write** | A one-shot hook rewrites the tag inside Kirki's own save request, then removes itself |
+| **Rich text aware** | A heading with styled `<span>`s stays a single block |
+| **Live checks** | Outline preview and problem list update as you edit, with no extra page calls |
+| **Themes** | Light, dark and auto |
+
+### Screenshots
+
+| Outline | Changes |
+|---|---|
+| <img src="docs/screenshots/panel-outline.png" alt="Outline tab" width="380"> | <img src="docs/screenshots/panel-changes.png" alt="Changes tab" width="380"> |
+| The proposed H1–H6 structure, with checks and the **Vis** column (D/T/L/M). | Only the rows that change. Retag or untick any of them. |
+
+| Applying | Brand |
+|---|---|
+| <img src="docs/screenshots/panel-apply.png" alt="Applying changes" width="380"> | <img src="brand/brand-preview.png" alt="H(x) logo in light and dark" width="380"> |
+| **Apply N changes**, then Save in Kirki — the panel confirms "✓ saved". | The mark at every size, light and dark. |
 
 ## Contents
-- [Install](#install-unpacked) · [Use](#use) · [How it works](#how-it-works) · [Tests](#tests) · [Known limits](#known-limits)
+[Install](#install-unpacked) · [Use](#use) · [How it works](#how-it-works) · [Tests](#tests) · [Rich text](#rich-text) · [How levels are decided](#how-levels-are-decided) · [Known limits](#known-limits) · [Brand](#brand)
 
 ## Install (unpacked)
 1. Open `chrome://extensions` and turn on **Developer mode**.
