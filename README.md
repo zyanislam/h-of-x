@@ -32,15 +32,18 @@ Heading levels decide how a page reads to search engines and to screen readers, 
 
 ### Screenshots
 
-| Outline | Changes |
-|---|---|
-| <img src="docs/screenshots/panel-outline.png" alt="Outline tab" width="380"> | <img src="docs/screenshots/panel-changes.png" alt="Changes tab" width="380"> |
-| The proposed H1–H6 structure, with checks and the **Vis** column (D/T/L/M). | Only the rows that change. Retag or untick any of them. |
+<div align="center">
 
-| Applying | Brand |
+<img src="docs/screenshots/panel-changes-dark.png" alt="The H(x) panel listing the heading changes it found" width="760">
+
+*The panel after a scan — every heading it would retag, with the current tag, the suggested tag and the breakpoints it appears on.*
+
+</div>
+
+| Outline | Light & dark |
 |---|---|
-| <img src="docs/screenshots/panel-apply.png" alt="Applying changes" width="380"> | <img src="brand/brand-preview.png" alt="H(x) logo in light and dark" width="380"> |
-| **Apply N changes**, then Save in Kirki — the panel confirms "✓ saved". | The mark at every size, light and dark. |
+| <img src="docs/screenshots/panel-outline.png" alt="Outline tab" width="380"> | <img src="docs/screenshots/panel-light.png" alt="The panel in light mode" width="380"> |
+| The resulting H1–H6 structure, with checks and the **Vis** column (D/T/L/M). | The same panel in light mode — it follows your system theme. |
 
 ## Contents
 [Install](#install-unpacked) · [Use](#use) · [How it works](#how-it-works) · [Tests](#tests) · [Rich text](#rich-text) · [How levels are decided](#how-levels-are-decided) · [Known limits](#known-limits) · [Brand](#brand)
