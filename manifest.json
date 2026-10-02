@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "H of x",
+  "version": "1.3.0",
+  "description": "Scan a Kirki page, suggest a correct H1–H6 outline across breakpoints, and apply the tags on Save.",
+  "permissions": ["sidePanel", "scripting", "activeTab", "tabs", "storage"],
+  "host_permissions": ["http://localhost/*", "http://127.0.0.1/*"],
+  "optional_host_permissions": ["https://*/*", "http://*/*"],
+  "background": { "service_worker": "background.js" },
+  "side_panel": { "default_path": "sidepanel.html" },
+  "action": { "default_title": "H of x", "default_icon": { "16": "icons/16.png", "48": "icons/48.png", "32": "icons/32.png", "128": "icons/128.png" } },
+  "icons": { "16": "icons/16.png", "48": "icons/48.png", "32": "icons/32.png", "128": "icons/128.png" }
+}

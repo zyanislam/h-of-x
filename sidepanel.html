@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>H(x)</title>
+<link rel="stylesheet" href="sidepanel.css">
+<script src="theme.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="brand statusbar">
+    <span class="big" id="sumBig"></span>
+    <span class="health" id="health"></span>
+  </div>
+  <p id="status" class="subtitle" aria-live="polite" hidden></p>
+  <button id="rescan" class="icon-btn" aria-label="Scan again" title="Scan again" hidden>
+    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M16.5 10a6.5 6.5 0 1 1-1.9-4.6M16.5 3.5v3.5H13"/></svg>
+  </button>
+  <button id="menuBtn" class="icon-btn" aria-label="More" title="More" aria-haspopup="menu" aria-expanded="false" aria-controls="menu">
+    <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="4.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="10" cy="10" r="1.3" fill="currentColor" stroke="none"/><circle cx="10" cy="15.5" r="1.3" fill="currentColor" stroke="none"/></svg>
+  </button>
+  <div id="menu" class="menu" role="menu" aria-label="Settings" hidden>
+    <div class="menu-head">
+      <span>Settings</span>
+      <button type="button" id="menuClose" class="icon-btn small" aria-label="Close">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9"/></svg>
+      </button>
+    </div>
+    <p class="menu-label">Scan</p>
+    <button type="button" class="menu-item" id="menuRescan" role="menuitem">
+      <span>Scan again</span>
+    </button>
+    <label class="menu-item" role="menuitemcheckbox">
+      <span class="grow">Include uncertain fixes</span>
+      <input type="checkbox" id="optLow" role="switch" checked>
+    </label>
+    <label class="menu-item" role="menuitemcheckbox">
+      <span class="grow">One H1 in page source</span>
+      <input type="checkbox" id="optOneH1" role="switch" checked>
+    </label>
+    <label class="menu-item" role="menuitemcheckbox">
+      <span class="grow">Show paragraphs</span>
+      <input type="checkbox" id="optParas" role="switch">
+    </label>
+    <p class="menu-label">Appearance</p>
+    <label class="menu-item" role="menuitemcheckbox">
+      <span class="grow">Highlight wrong tags</span>
+      <input type="checkbox" id="optHighlight" role="switch">
+    </label>
+    <div class="menu-item static">
+      <span class="grow">Theme</span>
+      <div class="seg" role="radiogroup" aria-label="Appearance">
+        <button type="button" data-theme="system" role="radio">Auto</button>
+        <button type="button" data-theme="light" role="radio">Light</button>
+        <button type="button" data-theme="dark" role="radio">Dark</button>
+      </div>
+    </div>
+    <div class="menu-sep"></div>
+    <button type="button" class="menu-item" id="clearIgnored" role="menuitem">
+      <span>Restore skipped items</span>
+    </button>
+  </div>
+</header>
+
+
+<main>
+  <div id="error" class="banner" role="alert" hidden></div>
+
+  <section id="empty" class="empty">
+    <div class="start-brand">
+      <img src="brand/logo.svg" alt="">
+      <h1>H of x</h1>
+      <p>Correct heading tags for the page open in Kirki.</p>
+    </div>
+    <div class="empty-card">
+      <ol class="steps">
+        <li><span>1</span><div><b>Scan</b><small>Reads the page on all screen sizes. Nothing is changed.</small></div></li>
+        <li><span>2</span><div><b>Review</b><small>See the outline and the reason for each fix.</small></div></li>
+        <li><span>3</span><div><b>Apply</b><small>Tags change in the editor straight away.</small></div></li>
+      </ol>
+    </div>
+    <button type="button" id="scanBig" class="btn primary block">Scan page</button>
+  </section>
+
+  <div id="results" hidden>
+    <ul id="issues" class="issues" hidden></ul>
+
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" id="tabOutline" class="on" aria-selected="true">Outline</button>
+      <button type="button" role="tab" id="tabChanges" aria-selected="false">Changes <span id="tabCount" class="count"></span></button>
+    </div>
+
+    <section id="paneOutline">
+      <div class="outline-bar">
+        <div id="bpSeg" class="bp-seg" role="radiogroup" aria-label="Screen size"></div>
+        <button type="button" id="onlyChanged" class="chip-toggle" aria-pressed="false">Only changes</button>
+      </div>
+      <ol id="outline" class="outline"></ol>
+    </section>
+
+    <section id="paneChanges" hidden></section>
+  </div>
+
+</main>
+
+<footer id="applyBar" class="bottom" hidden>
+  <p id="flow" class="flow" aria-live="polite" hidden></p>
+  <div class="actions">
+    <button id="disarm" class="btn" hidden>Cancel</button>
+    <button id="reload" class="btn primary" hidden>Reload editor</button>
+    <button id="apply" class="btn primary">Apply fixes</button>
+  </div>
+</footer>
+
+<script src="sidepanel.js"></script>
+</body>
+</html>
