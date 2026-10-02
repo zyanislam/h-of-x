@@ -2,9 +2,25 @@
 
 # H(x): f(page) = clarity
 
-A Chrome extension for the Kirki page builder.
+![Chrome MV3](https://img.shields.io/badge/Chrome-MV3_side_panel-4285F4?style=flat-square&logo=googlechrome&logoColor=white)
+![Tests](https://img.shields.io/badge/tests-Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
+![Version](https://img.shields.io/badge/version-1.3.0-555?style=flat-square)
 
-Scans a page open in the Kirki editor, suggests a correct H1–H6 outline across all breakpoints, and writes the tags when you click **Save**.
+A Chrome extension for the **Kirki** page builder.
+
+Scans a page open in the Kirki editor, suggests a correct H1–H6 outline across all four breakpoints, and writes the tags when you click **Save**. Nothing is changed until you review it.
+
+**Why:** heading levels decide how a page reads to search engines and screen readers, and in a visual builder they drift out of order as a page grows. H(x) reads the real rendered structure and proposes the outline the page should have had.
+
+### At a glance
+- **Review first** — every suggested change is a row you can retag, untick or skip
+- **All breakpoints** — desktop, tablet, landscape and mobile are merged into one tag per element
+- **Safe write** — a one-shot hook rewrites the tag in Kirki's own save request, then removes itself
+- **Rich text aware** — a heading with styled `<span>`s stays one block
+- Light / dark / auto panel, live outline preview and checks
+
+## Contents
+- [Install](#install-unpacked) · [Use](#use) · [How it works](#how-it-works) · [Tests](#tests) · [Known limits](#known-limits)
 
 ## Install (unpacked)
 1. Open `chrome://extensions` and turn on **Developer mode**.
