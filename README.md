@@ -11,7 +11,7 @@ Scan a page, get a correct H1–H6 outline across every breakpoint, apply it on 
 ![Tests](https://img.shields.io/badge/tests-Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white)
 ![Version](https://img.shields.io/badge/version-1.3.0-555?style=flat-square)
 
-<img src="docs/screenshots/panel-outline.png" alt="The H(x) side panel showing a page outline" width="760">
+<img src="docs/screenshots/outline-dark.png" alt="The H(x) side panel showing a page outline with the suggested tag changes" width="320">
 
 </div>
 
@@ -32,18 +32,12 @@ Heading levels decide how a page reads to search engines and to screen readers, 
 
 ### Screenshots
 
-<div align="center">
+| Outline | Changes | Start |
+|---|---|---|
+| <img src="docs/screenshots/outline-dark.png" alt="Outline tab" width="250"> | <img src="docs/screenshots/changes-light.png" alt="Changes tab" width="250"> | <img src="docs/screenshots/start-light.png" alt="Empty state" width="250"> |
+| The whole page structure per breakpoint. Struck-through tags are the current ones, violet is what H(x) suggests — `P → H3`, `H2 → P`. | Only the rows that change, in reading order, so you can check each fix in context. CMS items and components are labelled. | Before a scan: what the three steps do, and nothing is touched until you say so. |
 
-<img src="docs/screenshots/panel-changes-dark.png" alt="The H(x) panel listing the heading changes it found" width="760">
-
-*The panel after a scan — every heading it would retag, with the current tag, the suggested tag and the breakpoints it appears on.*
-
-</div>
-
-| Outline | Light & dark |
-|---|---|
-| <img src="docs/screenshots/panel-outline.png" alt="Outline tab" width="380"> | <img src="docs/screenshots/panel-light.png" alt="The panel in light mode" width="380"> |
-| The resulting H1–H6 structure, with checks and the **Vis** column (D/T/L/M). | The same panel in light mode — it follows your system theme. |
+Dark and light follow your system theme.
 
 ## Contents
 [Install](#install-unpacked) · [Use](#use) · [How it works](#how-it-works) · [Tests](#tests) · [Rich text](#rich-text) · [How levels are decided](#how-levels-are-decided) · [Known limits](#known-limits) · [Brand](#brand)
