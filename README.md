@@ -2,7 +2,7 @@
 
 <img src="brand/logo.svg" alt="" width="104">
 
-# H(x) &nbsp;·&nbsp; `f(page) = clarity`
+# H(x)
 
 **A Chrome extension for the [Kirki](https://kirki.io) page builder.**
 Scan a page, get a correct H1–H6 outline across every breakpoint, apply it on Save.
